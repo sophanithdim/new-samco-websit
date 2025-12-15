@@ -1,30 +1,50 @@
-# Website rebuild
+# Samco Website Rebuild
 
-*Automatically synced with your [v0.app](https://v0.app) deployments*
+This repository contains a rebuilt Next.js website for Samco, a manufacturer of precast concrete piling products.
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/sophanith-dims-projects/v0-website-rebuild)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.app-black?style=for-the-badge)](https://v0.app/chat/eHGJYKkWN5z)
+## Features
+- Next.js 16 app directory
+- Tailwind CSS + shadcn/ui components
+- Responsive design and animations (Framer Motion)
+- Lightweight, static-friendly asset handling
 
-## Overview
+## Local development
+1. Install dependencies:
 
-This repository will stay in sync with your deployed chats on [v0.app](https://v0.app).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.app](https://v0.app).
+```bash
+npm install
+```
 
-## Deployment
+2. Run the dev server:
 
-Your project is live at:
+```bash
+npm run dev
+# Open http://localhost:3000
+```
 
-**[https://vercel.com/sophanith-dims-projects/v0-website-rebuild](https://vercel.com/sophanith-dims-projects/v0-website-rebuild)**
+3. Build and preview production:
 
-## Build your app
+```bash
+npm run build
+npm start
+```
 
-Continue building your app on:
+## Favicon / App Icon
+The site uses `public/favicon.svg` as the app icon. If you want broader browser support, generate PNG/ICO sizes and add them to `public/`.
 
-**[https://v0.app/chat/eHGJYKkWN5z](https://v0.app/chat/eHGJYKkWN5z)**
+## Deploying
+Recommended hosting: Vercel
 
-## How It Works
+1. Import the repository into Vercel (connect your GitHub account).
+2. Select the `main` branch and let Vercel detect Next.js.
+3. Deploy — Vercel will run `npm install` and `npm run build` by default.
 
-1. Create and modify your project using [v0.app](https://v0.app)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+## Notes
+- Vercel Analytics has been removed from the project; there is no active analytics package configured by default.
+
+## License
+Add a license file if you intend to make this repo public.
+
+---
+
+If you want, I can add a short `CONTRIBUTING.md`, generate PNG favicons, or wire up Vercel automatic deployments for you.
