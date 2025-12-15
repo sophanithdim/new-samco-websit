@@ -1,7 +1,7 @@
 import type React from "react"
 import type { Metadata } from "next"
 import { Geist, Geist_Mono } from "next/font/google"
-import { Analytics } from "@vercel/analytics/next"
+// removed @vercel analytics import
 import "./globals.css"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
@@ -14,23 +14,15 @@ export const metadata: Metadata = {
   title: "Samco - Professional Concrete Piling Solutions",
   description:
     "Leading manufacturer of quality precast concrete piling products for construction and engineering projects in Thailand.",
-  generator: "v0.app",
+  generator: "Next.js",
   icons: {
     icon: [
       {
-        url: "/icon-light-32x32.png",
-        media: "(prefers-color-scheme: light)",
-      },
-      {
-        url: "/icon-dark-32x32.png",
-        media: "(prefers-color-scheme: dark)",
-      },
-      {
-        url: "/icon.svg",
+        url: "/favicon.svg",
         type: "image/svg+xml",
       },
     ],
-    apple: "/apple-icon.png",
+    apple: "/favicon.svg",
   },
 }
 
@@ -46,7 +38,6 @@ export default function RootLayout({
         <Header />
         <main>{children}</main>
         <Footer />
-        <Analytics />
       </body>
     </html>
   )
